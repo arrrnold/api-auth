@@ -91,6 +91,8 @@ exports.login = async (req, res) => {
                     res.status(200).json({
                         estado: 1,
                         mensaje: "Usuario autenticado correctamente",
+                        email: email,
+                        name: usuarioExistente.name,
                         token: token
                     })
                 }
